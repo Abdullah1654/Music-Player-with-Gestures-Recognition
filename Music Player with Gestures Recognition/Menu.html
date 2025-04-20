@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <a href="splash_screen.html" class="logo">
+            <img src="Images/LOGO.png" alt="Logo">
+            <span>WaveBeats</span>
+        </a> 
+      </div>
+      <!-- <div class="profile">&#128100;</div> -->
+      <div class="profile">
+          <img src="Images/User.png" alt="Logo"> 
+      </div>
+    </header>
+    <main>
+        <h2>Menu</h2>
+      <div class="Settings">
+        <p>Settings</p>
+        <a  onclick="navigateTo('splash_screen')">
+          <p>Gesture Tips</p>
+        </a>        
+        <p>Languages</p>
+        <p>About Us</p>
+      </div>
+    </main>
+      
+    <footer>
+        <div class="footer-nav">
+            <button class="nav-btn active" onclick="navigateTo('songs')">
+                <img src="Images/Music.png" alt="Songs">
+                <span>Songs</span>
+            </button>
+            <button class="nav-btn" onclick="navigateTo('player')">
+                <img src="Images/youtube.png" alt="Play">
+                <span>Play</span>
+            </button>
+            <button class="nav-btn" onclick="navigateTo('menu')">
+                <img src="Images/Menu.png" alt="Menu">
+                <span>Menu</span>
+            </button>
+        </div>
+    </footer>    
+  </div>
+  <script src="songsScript.js"></script>
+</body>
+</html>

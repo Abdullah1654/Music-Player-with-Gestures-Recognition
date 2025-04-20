@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket Test</title>
+</head>
+<body>
+    <h1>WebSocket Test</h1>
+    <div id="status">Connecting...</div>
+    <div id="gesture">No gesture detected yet.</div>
+
+    <script>
+        const statusElement = document.getElementById('status');
+        const gestureElement = document.getElementById('gesture');
+
+        // Create a new WebSocket connection
+        const socket = new WebSocket('ws://localhost:8765');
+
+        // Connection opened
+        socket.addEventListener('open', function (event) {
+            statusElement.textContent = 'Connected to WebSocket server.';
+        });
+
+        // Listen for messages
+        socket.addEventListener('message', function (event) {
+            console.log('Message from server ', event.data);
+            gestureElement.textContent = 'Gesture: ' + event.data;
+        });
+
+        // Handle connection close
+        socket.addEventListener('close', function (event) {
+            statusElement.textContent = 'Disconnected from WebSocket server.';
+        });
+
+        // Handle errors
+        socket.addEventListener('error', function (event) {
+            statusElement.textContent = 'Error connecting to WebSocket server.';
+            console.error('WebSocket error: ', event);
+        });
+    </script>
+</body>
+</html>

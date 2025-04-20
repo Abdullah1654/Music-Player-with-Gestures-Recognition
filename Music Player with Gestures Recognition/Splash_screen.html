@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Splash Screen</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="Images/LOGO.png" alt="Logo">
+        <span>WaveBeats</span>
+      </div>
+    </header>
+    <div class="card-container">
+      <div class="card">
+        <img src="Images/Thumbs up.png" alt="Image 1">
+        <p>Gesture for Previous song</p>
+      </div>
+      <div class="card">
+        <img src="Images/thumbs down.png" alt="Image 2">
+        <p>Gesture for Next song</p>
+      </div>
+      <div class="card">
+        <img src="Images/palm.png" alt="Image 3">
+        <p>Gesture for Play/Pause song</p>
+      </div>
+      <div class="card">
+        <img src="Images/peace.png" alt="Image 4">
+        <p>Gesture to show playlist</p>
+      </div>
+    </div>
+    <div class="nxt-btn">
+          <button class="next-btn">Next</button>
+    </div>
+  </div>
+  <script>
+    const nextBtn = document.querySelector('.next-btn');
+    nextBtn.addEventListener('click', () => {
+      // Navigate to the next page or perform the desired action
+      window.location.href = 'songs.html';
+    });
+  </script>
+</body>
+</html>

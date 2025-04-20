@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="dropdown" onclick="navigateTo('songs')">&#9662;</button>
+            <button class="menu" onclick="navigateTo('menu')">&#9776;</button>
+        </header>
+        <main>
+            <div class="song-info">
+                <h1 id="song-title">One Last Time</h1>
+                <p id="artist-name">Ariana Grande</p>
+            </div>
+            <div class="album-art">
+                <img src="Images/display singer.png" alt="Album Art">
+                <div class="dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <!-- <div class="heart">&#9825;</div> -->
+            </div>
+            <div class="controls">
+                <div class="progress-bar">
+                    <span class="current-time" id="current-time">00:00</span>
+                    <input type="range" id="progress" min="0" max="100" value="0">
+                    <span class="duration" id="duration">00:00</span>
+                </div>
+                <div class="buttons">
+                    <button class="repeat" onclick="repeatSong()">&#10226;</button>
+                    <button class="prev" onclick="prevSong()">&#9664;&#9664;</button>
+                    <button class="play-pause" onclick="playPause()">&#10074;&#10074;</button>
+                    <button class="next" onclick="nextSong()">&#9654;&#9654;</button>
+                    <button class="playlist" onclick="showPlaylist()">&#9835;</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
